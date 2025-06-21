@@ -23,16 +23,16 @@ jobs:
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
           ## Add and uncomment any environment variables here
-          EVIDENCE_SOURCE__needful_things__filename: ${{ secrets.TESTINGDUCKDB }}
+          # EVIDENCE_SOURCE__needful_things__filename: ${{ secrets.TESTINGDUCKDB }}
           ## EVIDENCE_SOURCE__my_source__private_key: ${{ secrets.EVIDENCE_SOURCE__MY_SOURCE__PRIVATE_KEY }}
         run: |
           npm run sources
           npm run build
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'build/${{ github.event.repository.name }}'
+      # - name: Upload Artifacts
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: 'build/${{ github.event.repository.name }}'
 
   deploy:
     needs: build

@@ -29,10 +29,10 @@ jobs:
           npm run sources
           npm run build
 
-      # - name: Upload Artifacts
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: 'build/${{ github.event.repository.name }}'
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build'
 
   deploy:
     needs: build

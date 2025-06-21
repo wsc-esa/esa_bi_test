@@ -1,3 +1,6 @@
+deployment:
+  basePath: /esa_bi_test
+
 appearance:
   default: system
   switcher: true
